@@ -5,7 +5,7 @@ import styles from './layout.module.css'
 const PostsLayout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div className={styles.container}>
-      <small>Home › <Link href={'/posts'}>Posts</Link></small>
+      <small>Home › <Link href={'/weather'}>Weather</Link></small>
       {children}
     </div>
   )

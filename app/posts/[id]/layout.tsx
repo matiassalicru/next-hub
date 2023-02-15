@@ -1,5 +1,5 @@
-import Link from 'next/link'
 import React from 'react'
+import CommentsButton from './components/CommentsButton'
 
 const fetchSinglePosts = (id: string) => {
   return fetch(`https://jsonplaceholder.typicode.com/posts/${id}`, { next: { revalidate: 10 } })
@@ -12,9 +12,7 @@ export default async function ListOfPosts ({ children, params }: { children: Rea
     <article key={post.id}>
       <h1 style={{ color: '#09f' }}>{post.title}</h1>
       <p>{post.body}</p>
-      <Link href={`/posts/${params.id}/comments`}>
-        Ver comments
-      </Link>
+      <CommentsButton id={params.id}/>
       {children}
     </article>
   )

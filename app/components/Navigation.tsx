@@ -13,11 +13,11 @@ export const Navigation = () => {
       <nav>
         <ul className={styles.navigation}>
           {links.map(({ label, route }) => (
-            <li key={route}>
-              <Link href={route}>
-                {label}
-              </Link>
-            </li>
+            <>
+              <li key={route}>
+                <Link href={route}>{label}</Link>
+              </li>
+            </>
           ))}
         </ul>
       </nav>
