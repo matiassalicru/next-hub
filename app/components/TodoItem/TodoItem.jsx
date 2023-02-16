@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './TodoItem.module.css'
-import closedBin from '../../../assets/closedBin.png'
+import closedBin from '../../../assets/closedbin.png'
 
 const TodoItem = ({ todo, handleCheckItem, handleDeleteTodo }) => {
   const isCheckedClass = todo.isChecked ? styles.checked : ''
