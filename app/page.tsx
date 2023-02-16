@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Page = (): React.ReactNode => {
+const Page = (): JSX.Element => {
   return (
-      <h1>Choose the app you want 1asdf</h1> 
+      <h1>Choose the app you want</h1> 
   )
 }
 

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { LikeButton } from './LikeButton'
 
 const fetchPosts = () => {
-  return fetch('https://jsonplaceholder.typicode.com/posts', { next: { revalidate: 10 } })
+  return fetch('https://jsonplaceholder.typicode.com/posts', { next: { revalidate: 3 } })
     .then(res => res.json())
 }
 export default async function ListOfPosts () {

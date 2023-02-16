@@ -5,6 +5,7 @@ const links = [
   { label: 'Posts App', route: '/posts' },
   { label: 'Weather App', route: '/weather' },
   { label: 'Notes App', route: '/notes' },
+  { label: 'Todos App', route: '/todos' },
 ]
 
 export const Navigation = () => {
@@ -13,11 +14,9 @@ export const Navigation = () => {
       <nav>
         <ul className={styles.navigation}>
           {links.map(({ label, route }) => (
-            <>
-              <li key={route}>
-                <Link href={route}>{label}</Link>
-              </li>
-            </>
+            <li key={route}>
+              <Link href={route}>{label}</Link>
+            </li>
           ))}
         </ul>
       </nav>

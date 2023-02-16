@@ -6,21 +6,19 @@ interface SearchInterface {
   onSubmit: (e: any) => void
 }
 
-const Search = ({
-  setText,
-  text,
-  onSubmit,
-}: SearchInterface): any => {
+const Search = ({ setText, text, onSubmit }: SearchInterface): any => {
   return (
-    <form onSubmit={(e) => onSubmit(e)}>
-      <input
-        type='text'
-        onChange={(e) => setText(e.target.value)}
-        value={text}
-        className={styles.input}
-        placeholder='Write here'
-      />
-    </form>
+    <div className={styles.form}>
+      <form onSubmit={(e) => onSubmit(e)}>
+        <input
+          type='text'
+          onChange={(e) => setText(e.target.value)}
+          value={text}
+          className={styles.input}
+          placeholder='Write here'
+        />
+      </form>
+    </div>
   )
 }
 
